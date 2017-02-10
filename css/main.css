@@ -1,0 +1,100 @@
+/*
+	People Management
+	Author: Ronnel Sanchez
+	Version: 0.0.1
+*/
+/* BASE - Base style, mixins, normalize, varialbles */
+/* Font Colors */
+/*Background Color*/
+/* line 1, D:/web-projects/people-manage/scss/base/_normalize.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* line 5, D:/web-projects/people-manage/scss/base/_normalize.scss */
+.navbar {
+  margin: 0;
+}
+
+/* line 9, D:/web-projects/people-manage/scss/base/_normalize.scss */
+.thumbnail {
+  display: inline-block;
+}
+
+/* line 1, D:/web-projects/people-manage/scss/base/_base.scss */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: #333333;
+  margin-top: 150px;
+  background-color: #f1f1f1;
+}
+
+/* line 10, D:/web-projects/people-manage/scss/base/_base.scss */
+a {
+  color: #00467F;
+}
+
+/* line 12, D:/web-projects/people-manage/scss/base/_base.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 17, D:/web-projects/people-manage/scss/base/_base.scss */
+ul, li {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+/* line 22, D:/web-projects/people-manage/scss/base/_base.scss */
+button, a.btn {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+/* MODULES - Individual components */
+/* LAYOUTS - Page layout */
+/* Navbar */
+/* line 2, D:/web-projects/people-manage/scss/layouts/_nav.scss */
+.navbar {
+  border-bottom: 1px solid #00A4E4;
+  background-color: #ffffff;
+}
+
+/* line 8, D:/web-projects/people-manage/scss/layouts/_nav.scss */
+.navbar-sub {
+  background: #00467F;
+  position: fixed;
+  top: 51px;
+  z-index: 1029;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+/* line 17, D:/web-projects/people-manage/scss/layouts/_nav.scss */
+.navbar-sub .navbar-sub-list li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 23, D:/web-projects/people-manage/scss/layouts/_nav.scss */
+.navbar-sub .navbar-sub-list li a:hover {
+  color: #ffffff;
+}
+
+/* line 27, D:/web-projects/people-manage/scss/layouts/_nav.scss */
+.navbar-sub .navbar-sub-list li.active {
+  color: #00467F;
+  border-bottom: 3px solid #ffffff;
+}
+
+/* line 30, D:/web-projects/people-manage/scss/layouts/_nav.scss */
+.navbar-sub .navbar-sub-list li.active a {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=../css/main.map */

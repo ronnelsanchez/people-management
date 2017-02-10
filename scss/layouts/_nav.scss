@@ -1,0 +1,40 @@
+/* Navbar */
+.navbar {
+	@include add-border(1px, $light-blue-color, 'bottom');
+	background-color: #ffffff;
+
+}
+
+.navbar-sub {
+	background: $primary-color;
+	position: fixed;
+	top: 51px;
+    z-index: 1029;
+    @include box-shadow;
+
+    .navbar-sub-list {
+			    	li{ 
+			    		a{
+				    	 	text-transform: uppercase;
+				    	 	font-weight: bold;
+					    	padding: 10px 15px;
+					    	display: inline-block;
+					    	color: $transparent-white;
+					    	&:hover{
+					    		color: #ffffff;
+					    	}
+	    				}
+			    		&.active{
+			    			color: $primary-color;
+			    			@include add-border(3px, #ffffff, 'bottom');
+								a{
+					    			color: #ffffff;
+								}
+			    			}
+						}
+    	
+    				
+    }
+
+   
+}

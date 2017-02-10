@@ -1,0 +1,36 @@
+{
+	"version": 3,
+	"file": "../scss/main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/base/_variables.scss",
+		"../scss/base/_mixins.scss",
+		"../scss/base/_normalize.scss",
+		"../scss/base/_base.scss",
+		"../scss/modules/_typography.scss",
+		"../scss/modules/_blocks.scss",
+		"../scss/modules/_buttons.scss",
+		"../scss/modules/_components.scss",
+		"../scss/modules/_sections.scss",
+		"../scss/layouts/_nav.scss",
+		"../scss/layouts/_header.scss",
+		"../scss/layouts/_footer.scss"
+	],
+	"sourcesContent": [
+		"/*\r\n\tPeople Management\r\n\tAuthor: Ronnel Sanchez\r\n\tVersion: 0.0.1\r\n*/\r\n\r\n/* BASE - Base style, mixins, normalize, varialbles */\r\n@import 'base/_variables.scss';\r\n@import 'base/_mixins.scss';\r\n@import 'base/_normalize.scss';\r\n@import 'base/_base.scss';\r\n\r\n/* MODULES - Individual components */\r\n@import 'modules/_typography.scss';\r\n@import 'modules/_blocks.scss';\r\n@import 'modules/_buttons.scss';\r\n@import 'modules/_components.scss';\r\n@import 'modules/_sections.scss';\r\n\r\n/* LAYOUTS - Page layout */\r\n@import 'layouts/_nav.scss';\r\n@import 'layouts/_header.scss';\r\n@import 'layouts/_footer.scss';\r\n\r\n",
+		"/* Font Colors */\r\n$base-font-size: 14px;\r\n$base-font-family: \"Arial\", sans-serif;\r\n$base-line-height: 25px;\r\n$base-font-color: #333333;\r\n\r\n/*Background Color*/\r\n$primary-color: #00467F;\r\n$gray-color: #dddddd;\r\n$light-gray-color: #f1f1f1;\r\n$transparent-white: rgba(255,255,255,.7);\r\n$light-blue-color: #00A4E4;\r\n",
+		"@mixin border-radius($radius){\r\n\t-moz-border-radius:$radius;\r\n\t-webkit-border-radius:$radius;\r\n\tborder-radius: $radius;\r\n}\r\n\r\n@mixin box-shadow{\r\n\tbox-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);\r\n}\r\n\r\n@mixin add-border($size, $color, $position){\r\n\t@if $position == 'all'{\r\n\t\tborder:$size solid $color;\r\n\t} @else if $position == 'top'{\r\n\t\tborder-top: $size solid $color;\r\n\t} @else if $position == 'bottom'{\r\n\t\tborder-bottom: $size solid $color;\r\n\t} @else if $position == 'right'{\r\n\t\tborder-right: $size solid $color;\r\n\t} @else if $position == 'left'{\r\n\t\tborder-left: $size solid $color;\r\n\t} @else if $position == 'top-bottom'{\r\n\t\tborder-top: $size solid $color;\r\n\t\tborder-bottom: $size solid $color;\r\n\t} @else if $position == 'left-right'{\r\n\t\tborder-left: $size solid $color;\r\n\t\tborder-right: $size solid $color;\r\n\t}\r\n\r\n}",
+		"h1,h2,h3,h4,h5,h6{\r\n\tmargin: 0;\r\n}\r\n\r\n.navbar{\r\n\tmargin: 0;\r\n}\r\n\r\n.thumbnail{\r\n\tdisplay: inline-block;\r\n}",
+		"body{\r\n\tfont-family: $base-font-family;\r\n\tfont-size: $base-font-size;\r\n\tline-height: $base-line-height;\r\n\tcolor: $base-font-color;\r\n\tmargin-top: 150px;\r\n\tbackground-color: $light-gray-color;\r\n}\r\n\r\na{\r\n\tcolor: $primary-color;\r\n\t&:hover{\r\n\t\ttext-decoration: none;\r\n\t}\r\n}\r\n\r\nul, li{\r\n\tlist-style: none;\r\n\tmargin-bottom: 0px;\r\n}\r\n\r\nbutton, a.btn{\r\n\t@include border-radius(2px);\r\n}",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"/* Navbar */\r\n.navbar {\r\n\t@include add-border(1px, $light-blue-color, 'bottom');\r\n\tbackground-color: #ffffff;\r\n\r\n}\r\n\r\n.navbar-sub {\r\n\tbackground: $primary-color;\r\n\tposition: fixed;\r\n\ttop: 51px;\r\n    z-index: 1029;\r\n    @include box-shadow;\r\n\r\n    .navbar-sub-list {\r\n\t\t\t    \tli{ \r\n\t\t\t    \t\ta{\r\n\t\t\t\t    \t \ttext-transform: uppercase;\r\n\t\t\t\t    \t \tfont-weight: bold;\r\n\t\t\t\t\t    \tpadding: 10px 15px;\r\n\t\t\t\t\t    \tdisplay: inline-block;\r\n\t\t\t\t\t    \tcolor: $transparent-white;\r\n\t\t\t\t\t    \t&:hover{\r\n\t\t\t\t\t    \t\tcolor: #ffffff;\r\n\t\t\t\t\t    \t}\r\n\t    \t\t\t\t}\r\n\t\t\t    \t\t&.active{\r\n\t\t\t    \t\t\tcolor: $primary-color;\r\n\t\t\t    \t\t\t@include add-border(3px, #ffffff, 'bottom');\r\n\t\t\t\t\t\t\t\ta{\r\n\t\t\t\t\t    \t\t\tcolor: #ffffff;\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t    \t\t\t}\r\n\t\t\t\t\t\t}\r\n    \t\r\n    \t\t\t\t\r\n    }\r\n\r\n   \r\n}\r\n",
+		"",
+		""
+	],
+	"mappings": "AAAA;;;;EAIE;AAEF,sDAAsD;ACNtD,iBAAiB;AAMjB,oBAAoB;;AENpB,AAAA,EAAE,EAAC,AAAA,EAAE,EAAC,AAAA,EAAE,EAAC,AAAA,EAAE,EAAC,AAAA,EAAE,EAAC,AAAA,EAAE,CAAA;EAChB,MAAM,EAAE,CAAE;CACV;;;AAED,AAAA,OAAO,CAAA;EACN,MAAM,EAAE,CAAE;CACV;;;AAED,AAAA,UAAU,CAAA;EACT,OAAO,EAAE,YAAa;CACtB;;;ACVD,AAAA,IAAI,CAAA;EACH,WAAW,EHCO,OAAO,EAAE,UAAU;EGArC,SAAS,EHDO,IAAI;EGEpB,WAAW,EHAO,IAAI;EGCtB,KAAK,EHAY,OAAO;EGCxB,UAAU,EAAE,KAAM;EAClB,gBAAgB,EHGE,OAAO;CGFzB;;;AAED,AAAA,CAAC,CAAA;EACA,KAAK,EHHU,OAAO;CGOtB;;;AALD,AAAA,CAAC,AAEC,MAAM,CAAA;EACN,eAAe,EAAE,IAAK;CACtB;;;AAGF,AAAA,EAAE,EAAE,AAAA,EAAE,CAAA;EACL,UAAU,EAAE,IAAK;EACjB,aAAa,EAAE,GAAI;CACnB;;;AAED,AAAA,MAAM,EAAE,AAAC,CAAA,AAAA,IAAI,CAAA;EFpBZ,kBAAkB,EEqBK,GAAG;EFpB1B,qBAAqB,EEoBE,GAAG;EFnB1B,aAAa,EEmBU,GAAG;CAC1B;;AJXD,qCAAqC;AAOrC,2BAA2B;AUnB3B,YAAY;;AACZ,AAAA,OAAO,CAAC;EReN,aAAa,EQdM,GAAG,CRcD,KAAK,CDLT,OAAO;ESRzB,gBAAgB,EAAE,OAAQ;CAE1B;;;AAED,AAAA,WAAW,CAAC;EACX,UAAU,ETDK,OAAO;ESEtB,QAAQ,EAAE,KAAM;EAChB,GAAG,EAAE,IAAK;EACP,OAAO,EAAE,IAAK;ERJjB,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,mBAAI,EAAa,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,mBAAI;CQgCnD;;;AAhCD,AASS,WATE,CAOP,gBAAgB,CACZ,EAAE,CACD,CAAC,CAAA;EACC,cAAc,EAAE,SAAU;EAC1B,WAAW,EAAE,IAAK;EACnB,OAAO,EAAE,SAAU;EACnB,OAAO,EAAE,YAAa;EACtB,KAAK,ETXK,wBAAI;CSed;;;AAlBV,AASS,WATE,CAOP,gBAAgB,CACZ,EAAE,CACD,CAAC,AAMC,MAAM,CAAA;EACN,KAAK,EAAE,OAAQ;CACf;;;AAjBX,AAQQ,WARG,CAOP,gBAAgB,CACZ,EAAE,AAWA,OAAO,CAAA;EACP,KAAK,ETpBC,OAAO;ECSrB,aAAa,EQYe,GAAG,CRZV,KAAK,CQYO,OAAO;CAI/B;;;AAzBX,AAsBQ,WAtBG,CAOP,gBAAgB,CACZ,EAAE,AAWA,OAAO,CAGT,CAAC,CAAA;EACG,KAAK,EAAE,OAAQ;CAClB",
+	"names": []
+}

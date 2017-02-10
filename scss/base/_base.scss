@@ -1,0 +1,24 @@
+body{
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	color: $base-font-color;
+	margin-top: 150px;
+	background-color: $light-gray-color;
+}
+
+a{
+	color: $primary-color;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+ul, li{
+	list-style: none;
+	margin-bottom: 0px;
+}
+
+button, a.btn{
+	@include border-radius(2px);
+}
